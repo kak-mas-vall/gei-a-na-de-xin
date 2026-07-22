@@ -9,7 +9,8 @@
       content="Surat ulang tahun untuk Nisrina Hana Fathiyyah."
     />
     <title>給啊娜的信</title>
-    <link rel="stylesheet" href="text.css?v=20260722-2" />
+    <link rel="stylesheet" href="text.css?v=20260722-4" />
+    <script src="birthday.js?v=20260722-2" defer></script>
   </head>
   <body>
     <main class="loading">
@@ -55,42 +56,62 @@
         />
       </svg>
       <section class="comic-panels" aria-label="Komik empat panel">
-        <img
-          class="comic-panel"
-          src="panel-1.png"
-          width="2048"
-          height="2560"
-          alt="Panel 1 dari 4"
-          fetchpriority="high"
-          decoding="async"
-        />
-        <img
-          class="comic-panel"
-          src="panel-2.png"
-          width="2048"
-          height="2560"
-          alt="Panel 2 dari 4"
-          loading="lazy"
-          decoding="async"
-        />
-        <img
-          class="comic-panel"
-          src="panel-3.png"
-          width="2048"
-          height="2560"
-          alt="Panel 3 dari 4"
-          loading="lazy"
-          decoding="async"
-        />
-        <img
-          class="comic-panel"
-          src="panel-4.png"
-          width="2048"
-          height="2560"
-          alt="Panel 4 dari 4"
-          loading="lazy"
-          decoding="async"
-        />
+        <figure class="comic-panel" data-comic-panel role="img" aria-label="Panel 1 dari 4">
+          <img
+            class="comic-panel__fallback"
+            src="panel-1.png"
+            width="2048"
+            height="2560"
+            alt=""
+            fetchpriority="high"
+            decoding="async"
+          />
+          <video class="comic-panel__video" data-comic-video data-loop-start="2.6" muted playsinline preload="auto" aria-hidden="true">
+            <source src="panel-1-animated.mp4" type="video/mp4" />
+          </video>
+        </figure>
+        <figure class="comic-panel" data-comic-panel role="img" aria-label="Panel 2 dari 4">
+          <img
+            class="comic-panel__fallback"
+            src="panel-2.png"
+            width="2048"
+            height="2560"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+          <video class="comic-panel__video" data-comic-video data-loop-start="2.6" muted playsinline preload="metadata" aria-hidden="true">
+            <source src="panel-2-animated.mp4" type="video/mp4" />
+          </video>
+        </figure>
+        <figure class="comic-panel" data-comic-panel role="img" aria-label="Panel 3 dari 4">
+          <img
+            class="comic-panel__fallback"
+            src="panel-3.png"
+            width="2048"
+            height="2560"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+          <video class="comic-panel__video" data-comic-video data-loop-start="2.04" data-sync-duration="5.071733" muted playsinline preload="metadata" aria-hidden="true">
+            <source src="panel-3-animated.mp4" type="video/mp4" />
+          </video>
+        </figure>
+        <figure class="comic-panel" data-comic-panel role="img" aria-label="Panel 4 dari 4">
+          <img
+            class="comic-panel__fallback"
+            src="panel-4.png"
+            width="2048"
+            height="2560"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+          <video class="comic-panel__video" data-comic-video data-loop-start="2.6" muted playsinline preload="metadata" aria-hidden="true">
+            <source src="panel-4-animated.mp4" type="video/mp4" />
+          </video>
+        </figure>
       </section>
       <p class="project-title" lang="zh-Hant">給啊娜的信</p>
       <h1>Selamat ulang tahun, Nisrina Hana Fathiyyah.</h1>
