@@ -163,6 +163,60 @@ h3 {
   font-size: 30px;
 }
 
+.music-toggle {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 10;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(249, 125, 196, 0.65);
+  border-radius: 50%;
+  background: rgba(58, 24, 50, 0.88);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.38);
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.music-toggle[hidden] {
+  display: none;
+}
+
+.music-toggle:hover,
+.music-toggle:focus-visible {
+  background: rgba(226, 19, 147, 0.92);
+  transform: translateY(-2px);
+}
+
+.music-toggle:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 3px;
+}
+
+.music-toggle__icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.music-toggle.is-playing .music-toggle__icon {
+  animation: music-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes music-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.16);
+  }
+}
+
 @media (max-width: 520px) {
   .loading {
     padding-right: 16px;
@@ -192,5 +246,11 @@ h3 {
 
   .comic-panel__fallback {
     display: block !important;
+  }
+
+  .music-toggle,
+  .music-toggle__icon {
+    animation: none !important;
+    transition: none !important;
   }
 }

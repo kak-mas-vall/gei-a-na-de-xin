@@ -9,8 +9,9 @@
       content="Surat ulang tahun untuk Nisrina Hana Fathiyyah."
     />
     <title>給啊娜的信</title>
-    <link rel="stylesheet" href="text.css?v=20260722-4" />
+    <link rel="stylesheet" href="text.css?v=20260722-5" />
     <script src="birthday.js?v=20260722-2" defer></script>
+    <script src="music.js?v=20260722-1" defer></script>
   </head>
   <body>
     <main class="loading">
@@ -136,5 +137,19 @@
       </article>
       <h3>— Kak Mas Vall</h3>
     </main>
+    <audio id="background-music" loop preload="metadata">
+      <source src="the-art-of-chasing-you.mp3" type="audio/mpeg" />
+    </audio>
+    <button
+      class="music-toggle"
+      id="music-toggle"
+      type="button"
+      aria-label="Putar musik latar"
+      aria-pressed="false"
+      title="Putar musik latar"
+      hidden
+    >
+      <span class="music-toggle__icon" aria-hidden="true">♫</span>
+    </button>
   </body>
 </html>
