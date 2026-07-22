@@ -78,12 +78,50 @@ svg path.linear-1 {
 }
 
 .comic-panel {
+  position: relative;
   display: block;
   width: 100%;
-  height: auto;
   margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
   border: 2px solid rgba(255, 156, 10, 0.72);
   border-radius: 12px;
+  background: #fff;
+}
+
+.comic-panel__fallback,
+.comic-panel__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comic-panel__video {
+  display: none;
+  opacity: 0;
+  transition: opacity 280ms ease;
+}
+
+.comic-motion .comic-panel__fallback {
+  display: none;
+}
+
+.comic-motion .comic-panel__video {
+  display: block;
+}
+
+.comic-motion .comic-panel.is-revealing .comic-panel__video,
+.comic-motion .comic-panel.is-revealed .comic-panel__video {
+  opacity: 1;
+}
+
+.comic-panel.is-fallback .comic-panel__fallback {
+  display: block;
+}
+
+.comic-panel.is-fallback .comic-panel__video {
+  display: none;
 }
 
 h1,
@@ -146,5 +184,13 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   .loading path {
     animation: none !important;
+  }
+
+  .comic-panel__video {
+    display: none !important;
+  }
+
+  .comic-panel__fallback {
+    display: block !important;
   }
 }
